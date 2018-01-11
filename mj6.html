@@ -3,10 +3,10 @@
 <head><meta charset="utf-8">
 <style>
 #header {
-background-color:lightblue;
+background-image:url("jj.jpg");
 color:white;
 text-align:center;
-padding:5px;
+padding:50px;
  }
 #nav {
 line-height:30px;
@@ -20,15 +20,16 @@ padding:5px;
 background-image:url("chara.jpg");
 background-repeat:no-repeat;
 background-size:cover;
-color:lightgreen;
+color:	#4682B4;
  }
 #footer {
-background-color:lightblue;
+background-image: url("000000.png");
 color:white;
 clear:both;
 text-align:center;
 padding:5px;
  }
+
 
 </style>
 </head>
@@ -38,11 +39,32 @@ padding:5px;
 <h1>日本麻將的規則</h1>
 </div>
 <div id="footer">
-<p><a href="mj3.html">日本麻將的計分方法</a> <a href="mj.html">日本麻將的基礎說明</a>    <a href="mj5.html">得分速查表</a> <a href="mj2 (2).html">日本麻將的役種介紹</a> <a href="mj6.html">日本麻將的規則</a></p>
+<p><a href="mj7.html"><img src="home.png" border="0"></a> <a href="mj.html"><img src="kisu.png" border="0"></a> <a href="mj2.html"><img src="kind.png" border="0"></a> <a href="mj3.html"><img src="score.png" border="0"></a> <a href="mj5.html"><img src="find.png" border="0"></a>  <a href="mj6.html"><img src="rule.png" border="0"></a> </p>
 </div>
-<h6>song:virtue-s-vengeance---the-savior-s-finale--ost-edition-</h6>
-<iframe src="https://drive.google.com/file/d/1rgIC_DGzXpqYS4yroqdQkkZERnkR8qoh/preview" width="400" height="50"></iframe>
 <div id="section">
+<audio id="audioplayer" controls> <!-- Remove the "Controls" Attrebute if you dont want the visual controls -->
+</audio>
+
+<script>
+    var lastSong = null;
+    var selection = null;
+    var playlist = ["【東方Vocal】 Bad Apple!! feat.nomico (Nhato Remix) 「Alstroemeria Records」 【Subbed】.mp3", " 【東方ニコカラ】華鳥風月 【幻想万華鏡シリーズ】-0.mp3", "【東方ニコカラ】「泡沫、哀のまほろば」-0.mp3","【MAD】名前のない怪物【Fate-go】修正版.mp3","夜咄ディセイブ 歌いました【鹿乃】.mp3"];
+    var player = document.getElementById("audioplayer");
+    player.autoplay=true;
+    player.addEventListener("ended", selectRandom); 
+
+    function selectRandom(){
+        while(selection == lastSong){ 
+            selection = Math.floor(Math.random() * playlist.length);
+        }
+        lastSong = selection; 
+        player.src = playlist[selection]; 
+
+    }
+
+    selectRandom("【MAD】名前のない怪物【Fate-go】修正版.mp3");
+    player.play("【MAD】名前のない怪物【Fate-go】修正版.mp3");
+</script>
 <h3>1.流局:</h3>
  <h5>(1)正常情況的流局:當牌全部摸盡時(只餘下王牌)，且無人和牌，則該局流局。並計算不聽罰符。若莊家為聽牌狀態，則由下家擔任莊家，反之，則視為連莊。</h5>
  <h6>不聽罰符:依照以下規則給付。</h5>

@@ -3,10 +3,10 @@
 <head><meta charset="utf-8">
 <style>
 #header {
-background-color:lightblue;
+background-image:url("SakiA16-6b.jpg");
 color:white;
 text-align:center;
-padding:5px;
+padding:50px;
  }
 #nav {
 line-height:30px;
@@ -23,12 +23,13 @@ background-size:cover;
 color:lightgreen;
  }
 #footer {
-background-color:lightblue;
+background-image: url("000000.png");
 color:white;
 clear:both;
 text-align:center;
 padding:5px;
  }
+
 </style>
 <div id="header">
 <h1>得分速查表</h1>
@@ -36,10 +37,31 @@ padding:5px;
 <body>
 	<body style="background-color:lightpink">
 <div id="footer">
-<p><a href="mj3.html">日本麻將的計分方法</a> <a href="mj.html">日本麻將的基礎說明</a>    <a href="mj5.html">得分速查表</a> <a href="mj2 (2).html">日本麻將的役種介紹</a> <a href="mj6.html">日本麻將的規則</a></p>
+<p><a href="mj7.html"><img src="home.png" border="0"></a> <a href="mj.html"><img src="kisu.png" border="0"></a> <a href="mj2.html"><img src="kind.png" border="0"></a> <a href="mj3.html"><img src="score.png" border="0"></a> <a href="mj5.html"><img src="find.png" border="0"></a>  <a href="mj6.html"><img src="rule.png" border="0"></a> </p>
 </div>
-<h6>song:PHOENIX projcet-妖魔夜行</h6>
-<iframe src="https://drive.google.com/file/d/18RLx0ZIp8tA2rscdWn_lP_QYsij1G1Fi/preview" width="400" height="50"></iframe>
+<audio id="audioplayer" controls> <!-- Remove the "Controls" Attrebute if you dont want the visual controls -->
+</audio>
+
+<script>
+    var lastSong = null;
+    var selection = null;
+    var playlist = ["【東方Vocal】 Bad Apple!! feat.nomico (Nhato Remix) 「Alstroemeria Records」 【Subbed】.mp3", " 【東方ニコカラ】華鳥風月 【幻想万華鏡シリーズ】-0.mp3", "【東方ニコカラ】「泡沫、哀のまほろば」-0.mp3","【MAD】名前のない怪物【Fate-go】修正版.mp3","夜咄ディセイブ 歌いました【鹿乃】.mp3"];
+    var player = document.getElementById("audioplayer");
+    player.autoplay=true;
+    player.addEventListener("ended", selectRandom); 
+
+    function selectRandom(){
+        while(selection == lastSong){ 
+            selection = Math.floor(Math.random() * playlist.length);
+        }
+        lastSong = selection; 
+        player.src = playlist[selection]; 
+
+    }
+
+    selectRandom("【MAD】名前のない怪物【Fate-go】修正版.mp3");
+    player.play("【MAD】名前のない怪物【Fate-go】修正版.mp3");
+</script>
 <h3>得分速查表-子家</h3>
 <img src= "kodomo.jpg" width= "768" height="768" />
 <br>

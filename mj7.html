@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<style>
+#header {
+background-image:url("head.jpg");
+color:white;
+text-align:center;
+padding:50px;
+ }
+#nav {
+line-height:30px;
+background-color:#eeeeee;
+height:300px;
+width:100px;
+float:left;
+padding:5px;
+ }
+#section {
+background-image:url(".jpg");
+background-repeat:no-repeat;
+background-size:cover;
+color:black;
+ }
+#footer {
+background-image: url("000000.png");
+color:white;
+clear:both;
+text-align:center;
+padding:1px;
+ }
+
+</style>
+<div id="header">
+<h1>日本麻將迅速上手</h1>
+</div>
+<body>
+	<body style="background-color:#CCCCFF">
+<div id="footer">
+<p><a href="mj7.html"><img src="home.png" border="0"></a> <a href="mj.html"><img src="kisu.png" border="0"></a> <a href="mj2.html"><img src="kind.png" border="0"></a> <a href="mj3.html"><img src="score.png" border="0"></a> <a href="mj5.html"><img src="find.png" border="0"></a>  <a href="mj6.html"><img src="rule.png" border="0"></a> </p>
+</div>
+<div id="section">
+<audio id="audioplayer" controls> <!-- Remove the "Controls" Attrebute if you dont want the visual controls -->
+</audio>
+
+<script>
+    var lastSong = null;
+    var selection = null;
+     var playlist = ["【東方Vocal】 Bad Apple!! feat.nomico (Nhato Remix) 「Alstroemeria Records」 【Subbed】.mp3", " 【東方ニコカラ】華鳥風月 【幻想万華鏡シリーズ】-0.mp3", "【東方ニコカラ】「泡沫、哀のまほろば」-0.mp3","【MAD】名前のない怪物【Fate-go】修正版.mp3","夜咄ディセイブ 歌いました【鹿乃】.mp3"];
+    var player = document.getElementById("audioplayer");
+    player.autoplay=true;
+    player.addEventListener("ended", selectRandom); 
+
+    function selectRandom(){
+        while(selection == lastSong){ 
+            selection = Math.floor(Math.random() * playlist.length);
+        }
+        lastSong = selection; 
+        player.src = playlist[selection]; 
+
+    }
+
+    selectRandom("【MAD】名前のない怪物【Fate-go】修正版.mp3");
+    player.play("【MAD】名前のない怪物【Fate-go】修正版.mp3");
+</script>
+</a></p>
+<h3>線上打麻將-天鳳</h3>
+<p><a href="http://tenhou.net/"><img src="sky.png"></a></p>
+
+
+</div>
+</body>
+</html>
