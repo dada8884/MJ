@@ -28,7 +28,7 @@ background-image: url("000000.png");
 color:white;
 clear:both;
 text-align:center;
-padding:5px;
+padding:1px;
  }
 
 </style>
@@ -43,30 +43,7 @@ padding:5px;
 <p><a href="mj7.html"><img src="home.png" border="0"></a> <a href="mj.html"><img src="kisu.png" border="0"></a> <a href="mj2.html"><img src="kind.png" border="0"></a> <a href="mj3.html"><img src="score.png" border="0"></a> <a href="mj5.html"><img src="find.png" border="0"></a>  <a href="mj6.html"><img src="rule.png" border="0"></a> </p>
 </div>
 <div id="section">
-<audio id="audioplayer" controls> <!-- Remove the "Controls" Attrebute if you dont want the visual controls -->
-</audio>
-
-<script>
-    var lastSong = null;
-    var selection = null;
-    var playlist = ["【東方Vocal】 Bad Apple!! feat.nomico (Nhato Remix) 「Alstroemeria Records」 【Subbed】.mp3", " 【東方ニコカラ】華鳥風月 【幻想万華鏡シリーズ】-0.mp3", "【東方ニコカラ】「泡沫、哀のまほろば」-0.mp3","【MAD】名前のない怪物【Fate-go】修正版.mp3","夜咄ディセイブ 歌いました【鹿乃】.mp3"];
-    var player = document.getElementById("audioplayer");
-    player.autoplay=true;
-    player.addEventListener("ended", selectRandom); 
-
-    function selectRandom(){
-        while(selection == lastSong){ 
-            selection = Math.floor(Math.random() * playlist.length);
-        }
-        lastSong = selection; 
-        player.src = playlist[selection]; 
-
-    }
-
-    selectRandom("【MAD】名前のない怪物【Fate-go】修正版.mp3");
-    player.play("【MAD】名前のない怪物【Fate-go】修正版.mp3");
-</script>
-<h3>1.由哪些牌構成:</h3>
+<br><h3>1.由哪些牌構成:</h3>
 <p>每人手牌13張 牌由數字一到九的萬、餅、條，再加上七種字牌(東、南、西、北、中、發、白)每種牌各四張。</p>
 <h3>2.叫牌</h3>
 <h5>吃:僅限對上家的捨牌，上家的捨牌可以和手牌湊成順子時，可喊吃。吃後不可再摸牌，需直接打出一張牌。</h5>

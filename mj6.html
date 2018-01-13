@@ -27,7 +27,7 @@ background-image: url("000000.png");
 color:white;
 clear:both;
 text-align:center;
-padding:5px;
+padding:1px;
  }
 
 
@@ -42,30 +42,7 @@ padding:5px;
 <p><a href="mj7.html"><img src="home.png" border="0"></a> <a href="mj.html"><img src="kisu.png" border="0"></a> <a href="mj2.html"><img src="kind.png" border="0"></a> <a href="mj3.html"><img src="score.png" border="0"></a> <a href="mj5.html"><img src="find.png" border="0"></a>  <a href="mj6.html"><img src="rule.png" border="0"></a> </p>
 </div>
 <div id="section">
-<audio id="audioplayer" controls> <!-- Remove the "Controls" Attrebute if you dont want the visual controls -->
-</audio>
-
-<script>
-    var lastSong = null;
-    var selection = null;
-    var playlist = ["【東方Vocal】 Bad Apple!! feat.nomico (Nhato Remix) 「Alstroemeria Records」 【Subbed】.mp3", " 【東方ニコカラ】華鳥風月 【幻想万華鏡シリーズ】-0.mp3", "【東方ニコカラ】「泡沫、哀のまほろば」-0.mp3","【MAD】名前のない怪物【Fate-go】修正版.mp3","夜咄ディセイブ 歌いました【鹿乃】.mp3"];
-    var player = document.getElementById("audioplayer");
-    player.autoplay=true;
-    player.addEventListener("ended", selectRandom); 
-
-    function selectRandom(){
-        while(selection == lastSong){ 
-            selection = Math.floor(Math.random() * playlist.length);
-        }
-        lastSong = selection; 
-        player.src = playlist[selection]; 
-
-    }
-
-    selectRandom("【MAD】名前のない怪物【Fate-go】修正版.mp3");
-    player.play("【MAD】名前のない怪物【Fate-go】修正版.mp3");
-</script>
-<h3>1.流局:</h3>
+<br><h3>1.流局:</h3>
  <h5>(1)正常情況的流局:當牌全部摸盡時(只餘下王牌)，且無人和牌，則該局流局。並計算不聽罰符。若莊家為聽牌狀態，則由下家擔任莊家，反之，則視為連莊。</h5>
  <h6>不聽罰符:依照以下規則給付。</h5>
  <h6>A.全聽or全不聽:無點數支付。</h6>
